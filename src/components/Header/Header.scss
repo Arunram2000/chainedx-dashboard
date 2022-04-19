@@ -1,0 +1,10 @@
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0 0;
+
+  .logo img {
+    width: 18rem;
+  }
+}
