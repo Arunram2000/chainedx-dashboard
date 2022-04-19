@@ -33,8 +33,16 @@
         display: grid;
         grid-template-columns: 200px auto;
 
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
         > img {
           width: 200px;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
         }
       }
 
@@ -75,10 +83,10 @@
         &::before {
           content: "";
           box-sizing: border-box;
-          width: 30px;
-          height: 30px;
+          width: 3rem;
+          height: 3rem;
           border-radius: 50%;
-          border: 10px solid #fff;
+          border: 1rem solid #fff;
           background-color: #3b4046;
           position: absolute;
           z-index: 1;
@@ -104,7 +112,7 @@
         }
 
         .progress_bar {
-          height: 10px;
+          height: 1rem;
           background: #fff;
           border-radius: 20px;
           transition: width 250ms linear;
@@ -113,10 +121,10 @@
           &::after {
             content: attr(data-percentage);
             box-sizing: border-box;
-            height: 50px;
+            height: 5rem;
             width: fit-content;
             border-radius: 30px;
-            border: 10px solid #fff;
+            border: 1rem solid #fff;
             background-color: #3b4046;
             position: absolute;
             z-index: 1;
@@ -125,15 +133,15 @@
             top: 50%;
             transform: translate(50%, -50%);
             font-weight: 500;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 1.6rem;
+            line-height: 2rem;
             color: #ffffff;
             text-align: center;
           }
         }
 
         .value {
-          font-size: 12px;
+          font-size: 1.2rem;
           line-height: 14px;
           position: absolute;
           top: 50%;
@@ -153,8 +161,8 @@
           transition: left 300ms ease-in-out;
 
           div {
-            width: 20px;
-            height: 20px;
+            width: 2rem;
+            height: 2rem;
             background: #ffffff;
             border: 2px solid #c28a24;
             box-sizing: border-box;

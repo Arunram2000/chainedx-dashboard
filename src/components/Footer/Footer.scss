@@ -76,6 +76,10 @@
       gap: 5rem;
     }
 
+    @media (max-width: 576px) {
+      gap: 2rem;
+    }
+
     > div {
       display: flex;
       gap: 4rem;

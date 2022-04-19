@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 
 import { Button } from "../../../components";
 import { ReactComponent as Location } from "../../../assets/icons/location.svg";
@@ -10,7 +10,25 @@ import { ReactComponent as Twitter } from "../../../assets/icons/twitter.svg";
 import { ReactComponent as Google } from "../../../assets/icons/google.svg";
 import { ReactComponent as Pinterest } from "../../../assets/icons/pinterest.svg";
 
+const initialState = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
 const ContactUs: React.FC = () => {
+  const [formData, setFormData] = useState(initialState);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="contactus">
       <div className="max pad">
@@ -80,22 +98,46 @@ const ContactUs: React.FC = () => {
               Leave a Messag<span className="color-primary">e</span>
             </h1>
             <div className="contact_form_block">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="form_input">
                   <label htmlFor="name">Enter Name*</label>
-                  <input type="text" name="name" id="" />
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="form_input">
                   <label htmlFor="email">Enter Email*</label>
-                  <input type="email" name="email" id="" />
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="form_input">
                   <label htmlFor="subject">Enter Subject*</label>
-                  <input type="text" name="subject" id="" />
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="form_input">
                   <label htmlFor="message">Message*</label>
-                  <input type="text" name="message" id="" />
+                  <input
+                    type="text"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <Button>Submit</Button>
               </form>

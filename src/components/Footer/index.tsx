@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Footer.scss";
@@ -8,6 +8,13 @@ import { footerQuickLinks } from "../../data/links";
 import Button from "../Button";
 
 const Footer: React.FC = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(email);
+  };
+
   const renderQuickLinks = (
     <div className="footer_quick_links">
       <h3 className="mb-30">Quick links</h3>
@@ -28,10 +35,16 @@ const Footer: React.FC = () => {
         By subscribing to our mailing list you will always be update with the
         latest news from us.
       </p>
-      <div className="footer_newsletter-form mt-20">
-        <input type="text" placeholder="Email" />
-        <Button>Subscribe</Button>
-      </div>
+      <form className="footer_newsletter-form mt-20" onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={({ target }) => setEmail(target.value)}
+          required
+        />
+        <Button type="submit">Subscribe</Button>
+      </form>
     </div>
   );
 
