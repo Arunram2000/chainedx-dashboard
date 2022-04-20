@@ -3,7 +3,7 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { ethers } from "ethers";
 
 export const Injected = new InjectedConnector({
-  supportedChainIds: [1, 4],
+  supportedChainIds: [97],
 });
 
 export const walletconnect = new WalletConnectConnector({
@@ -15,7 +15,7 @@ export const walletconnect = new WalletConnectConnector({
   pollingInterval: 12000,
 });
 
-const switchRequest = (chainId = 1) => {
+const switchRequest = (chainId = 97) => {
   const { ethereum } = window as any;
   return ethereum.request({
     method: "wallet_switchEthereumChain",
