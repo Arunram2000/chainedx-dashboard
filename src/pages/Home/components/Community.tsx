@@ -5,6 +5,7 @@ import instagram from "../../../assets/icons/instagram.png";
 import twitter from "../../../assets/icons/twitter.png";
 import telegram from "../../../assets/icons/telegram.png";
 import discord from "../../../assets/icons/discord.png";
+import { ReactComponent as Copy } from "../../../assets/icons/copy.svg";
 
 const Community: React.FC = () => {
   return (
@@ -21,6 +22,13 @@ const Community: React.FC = () => {
               <strong>LEASH</strong>, or <strong>BONE</strong> here. Thank you
               for your support! WOOF!
             </p>
+            <div className="clipboard">
+              <p>0xc351155C80aCD043BD5F8FE7ffc8536af1fF9375</p>
+              <button>
+                <Copy />
+                <span>Copy to clipboard</span>
+              </button>
+            </div>
             <p className="mb-20">
               Our community grows stronger every day. Please follow our social
               platforms to get the most up-to-date, accurate ChainedX

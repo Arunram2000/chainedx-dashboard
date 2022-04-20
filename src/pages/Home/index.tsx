@@ -9,6 +9,7 @@ import Roadmap from "./components/Roadmap";
 import Stats from "./components/Stats";
 import Community from "./components/Community";
 import ContactUs from "./components/ContactUs";
+import Tokensale from "./components/Tokensale";
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <Stats />
       <About />
       <HowItWorks />
+      <Tokensale />
       <Roadmap />
       <Community />
       <ContactUs />

@@ -11,7 +11,7 @@ import { ReactComponent as Interface } from "../../../assets/icons/interface.svg
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="works">
+    <section className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
         <div className="works_container">
           <div className="content">
@@ -19,8 +19,9 @@ const HowItWorks: React.FC = () => {
               How it Works<span className="color-primary">?</span>
             </h1>
             <p className="mb-20">
-              Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin
-              transactions-ayments from one user to another on a decentralized network.
+              Bitcoin Mining is a peer-to-peer computer process used to secure
+              and verify bitcoin transactions-ayments from one user to another
+              on a decentralized network.
             </p>
             <Button>
               <span>Let’s Start</span>
@@ -38,8 +39,9 @@ const HowItWorks: React.FC = () => {
               <b>Download a Wallet</b>
             </section>
             <p>
-              Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin
-              transactions-ayments from one user to another on a decentralized network.
+              Bitcoin Mining is a peer-to-peer computer process used to secure
+              and verify bitcoin transactions-ayments from one user to another
+              on a decentralized network.
             </p>
           </div>
           <div>
@@ -48,8 +50,9 @@ const HowItWorks: React.FC = () => {
               <b>Safe & Secure</b>
             </section>
             <p>
-              Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin
-              transactions-ayments from one user to another on a decentralized network.
+              Bitcoin Mining is a peer-to-peer computer process used to secure
+              and verify bitcoin transactions-ayments from one user to another
+              on a decentralized network.
             </p>
           </div>
           <div>
@@ -58,8 +61,9 @@ const HowItWorks: React.FC = () => {
               <b>Buy & Sell</b>
             </section>
             <p>
-              Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin
-              transactions-ayments from one user to another on a decentralized network.
+              Bitcoin Mining is a peer-to-peer computer process used to secure
+              and verify bitcoin transactions-ayments from one user to another
+              on a decentralized network.
             </p>
           </div>
           <div>
@@ -68,8 +72,9 @@ const HowItWorks: React.FC = () => {
               <b>A Better User Interface</b>
             </section>
             <p>
-              Bitcoin Mining is a peer-to-peer computer process used to secure and verify bitcoin
-              transactions-ayments from one user to another on a decentralized network.
+              Bitcoin Mining is a peer-to-peer computer process used to secure
+              and verify bitcoin transactions-ayments from one user to another
+              on a decentralized network.
             </p>
           </div>
         </div>
