@@ -6,6 +6,10 @@
   background: var(--card-bg);
   border-radius: var(--card-border-radius);
   box-shadow: var(--card-box-shadow);
+
+  @media (max-width: 576px) {
+    max-width: 90%;
+  }
 }
 
 .modal_backdrop {
