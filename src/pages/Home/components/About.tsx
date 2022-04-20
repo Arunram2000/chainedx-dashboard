@@ -4,7 +4,7 @@ import about from "../../../assets/images/about.png";
 
 const About: React.FC = () => {
   return (
-    <section className="about" data-aos="fade-left">
+    <section className="about" data-aos="fade-up">
       <div className="mx pad">
         <div className="about_container">
           <div className="abstract">
