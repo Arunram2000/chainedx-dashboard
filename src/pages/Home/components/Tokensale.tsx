@@ -89,7 +89,7 @@ const Tokensale: React.FC = () => {
   return (
     <div className="token_sale">
       <div className="mx pad">
-        <div className="token_sale_container">
+        <div className="token_sale_container" data-aos="zoom-out">
           <h1 className="mb-10">
             Token Sal<span className="color-primary">e</span>
           </h1>
@@ -130,7 +130,7 @@ const Tokensale: React.FC = () => {
             <RightArrow />
           </Button>
         </div>
-        <div className="token_sale_proceeds">
+        <div className="token_sale_proceeds" data-aos="zoom-in">
           <h1>
             Token Sale Proceed<span className="color-primary">s</span>
           </h1>

@@ -16,7 +16,7 @@ const Community: React.FC = () => {
   return (
     <section className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
-        <div className="works_container">
+        <div className="works_container" data-aos="slide-up">
           <div className="content">
             <h1 className="mb-30">
               Communit<span className="color-primary">y</span>
@@ -58,16 +58,16 @@ const Community: React.FC = () => {
             Click here to search for your preferred country!
           </p>
           <div>
-            <a href="/">
+            <a href="/" data-aos="fade-up">
               <img src={instagram} alt="instagram" />
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="50">
               <img src={twitter} alt="twitter" />
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="100">
               <img src={telegram} alt="telegram" />
             </a>
-            <a href="/">
+            <a href="/" data-aos="fade-up" data-aos-delay="150">
               <img src={discord} alt="discord" />
             </a>
           </div>

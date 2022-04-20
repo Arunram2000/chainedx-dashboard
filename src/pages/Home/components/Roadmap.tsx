@@ -25,7 +25,7 @@ const Roadmap: React.FC = () => {
               {roadmap
                 .slice(0, 3)
                 .map(({ description, title, icon }, index) => (
-                  <section key={index}>
+                  <section key={index} data-aos="fade-up">
                     <img src={icon} alt="roadmap icon" />
                     <b className="mb-10 mt-20">{title}</b>
                     <p>{description}</p>
@@ -46,7 +46,7 @@ const Roadmap: React.FC = () => {
               {roadmap
                 .slice(3, 6)
                 .map(({ description, title, icon }, index) => (
-                  <section key={index}>
+                  <section key={index} data-aos="fade-down">
                     <img src={icon} alt="roadmap icon" />
                     <b className="mb-10 mt-20">{title}</b>
                     <p>{description}</p>

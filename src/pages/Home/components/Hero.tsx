@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
           A <strong>DECENTRALIZED</strong> MEME TOKEN THAT EVOLVED INTO A
           VIBRANT ECOSYSTEM.
         </h1>
-        <div className="timer_container">
+        <div className="timer_container" data-aos="zoom-in">
           <p>
             The mining starts immediately after confirmed payment. First payouts
             within <span className="color-primary">24 hours</span>.
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
             </section>
           </div>
         </div>
-        <div className="hero_controls">
+        <div className="hero_controls" data-aos="fade-zoom-in">
           <Button>
             <FileIcon />
             <span>Whitepaper</span>

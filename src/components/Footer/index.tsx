@@ -17,7 +17,9 @@ const Footer: React.FC = () => {
 
   const renderQuickLinks = (
     <div className="footer_quick_links">
-      <h3 className="mb-30">Quick links</h3>
+      <h3 className="mb-30" data-aos="fade-up">
+        Quick links
+      </h3>
       <div>
         {footerQuickLinks.map(({ label, to }, index) => (
           <Link key={index.toString()} to={`/${to}`}>
@@ -30,7 +32,9 @@ const Footer: React.FC = () => {
 
   const renderNewsletter = (
     <div className="footer_newsletter">
-      <h3 className="mb-30">NEWSLETTERS</h3>
+      <h3 className="mb-30" data-aos="fade-up">
+        NEWSLETTERS
+      </h3>
       <p>
         By subscribing to our mailing list you will always be update with the
         latest news from us.
@@ -54,7 +58,7 @@ const Footer: React.FC = () => {
         <div className="mx pad">
           <footer>
             <div className="logo">
-              <img src={logo} alt="ChainedX logo" />
+              <img src={logo} alt="ChainedX logo" data-aos="fade-up" />
               <p>
                 ChainedX stands firmly in support of financial freedow and thhe
                 liberty that bitcoin provides globally for anyone to voluntarily

@@ -6,6 +6,7 @@ import { Web3Provider } from "@ethersproject/providers";
 
 import "./index.scss";
 import App from "./App";
+import "aos/dist/aos.css";
 
 const getLibrary = (provider) => {
   const library = new Web3Provider(provider);

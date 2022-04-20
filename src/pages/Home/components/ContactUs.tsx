@@ -33,7 +33,7 @@ const ContactUs: React.FC = () => {
     <div className="contactus">
       <div className="max pad">
         <div className="contactus_container">
-          <div className="contact_info">
+          <div className="contact_info" data-aos="flip-right">
             <h1 className="mb-50">
               Contact with <span className="color-primary">us</span>
             </h1>
@@ -93,7 +93,7 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="contact_form">
+          <div className="contact_form" data-aos="flip-left">
             <h1 className="mb-50">
               Leave a Messag<span className="color-primary">e</span>
             </h1>

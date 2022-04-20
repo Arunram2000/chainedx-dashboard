@@ -13,7 +13,7 @@ const HowItWorks: React.FC = () => {
   return (
     <section className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
-        <div className="works_container">
+        <div className="works_container" data-aos="fade-up">
           <div className="content">
             <h1 className="mb-30">
               How it Works<span className="color-primary">?</span>
@@ -33,7 +33,7 @@ const HowItWorks: React.FC = () => {
           </div>
         </div>
         <div className="works_stats_grid">
-          <div>
+          <div data-aos="fade-up">
             <section className="mb-10">
               <Download />
               <b>Download a Wallet</b>
@@ -44,7 +44,7 @@ const HowItWorks: React.FC = () => {
               on a decentralized network.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <section className="mb-10">
               <Lock />
               <b>Safe & Secure</b>
@@ -55,7 +55,7 @@ const HowItWorks: React.FC = () => {
               on a decentralized network.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <section className="mb-10">
               <Cart />
               <b>Buy & Sell</b>
@@ -66,7 +66,7 @@ const HowItWorks: React.FC = () => {
               on a decentralized network.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-up">
             <section className="mb-10">
               <Interface />
               <b>A Better User Interface</b>
