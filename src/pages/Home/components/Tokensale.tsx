@@ -154,7 +154,6 @@ const Tokensale: React.FC = () => {
                   { title: "Mobile Ad Platform", value: 20, color: "#C38B25" },
                 ]}
               />
-              ;
             </div>
             <div className="chart_stats">
               <ChartStats

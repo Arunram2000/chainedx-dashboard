@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import works_illustration from "../../../assets/images/community.svg";
 import instagram from "../../../assets/icons/instagram.png";
@@ -6,8 +6,13 @@ import twitter from "../../../assets/icons/twitter.png";
 import telegram from "../../../assets/icons/telegram.png";
 import discord from "../../../assets/icons/discord.png";
 import { ReactComponent as Copy } from "../../../assets/icons/copy.svg";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
+const CONTRACT_ADDRESS = "0xc351155C80aCD043BD5F8FE7ffc8536af1fF9375";
 
 const Community: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+
   return (
     <section className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
@@ -23,11 +28,16 @@ const Community: React.FC = () => {
               for your support! WOOF!
             </p>
             <div className="clipboard">
-              <p>0xc351155C80aCD043BD5F8FE7ffc8536af1fF9375</p>
-              <button>
-                <Copy />
-                <span>Copy to clipboard</span>
-              </button>
+              <p>{CONTRACT_ADDRESS}</p>
+              <CopyToClipboard
+                text={CONTRACT_ADDRESS}
+                onCopy={() => setCopied(true)}
+              >
+                <button>
+                  <Copy />
+                  <span>{!copied ? "Copy to clipboard" : "Copied"}</span>
+                </button>
+              </CopyToClipboard>
             </div>
             <p className="mb-20">
               Our community grows stronger every day. Please follow our social
