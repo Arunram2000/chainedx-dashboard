@@ -4,6 +4,7 @@ import Countdown from "react-countdown";
 import { ReactComponent as RightArrow } from "../../../assets/icons/right_arrow.svg";
 import { Button } from "../../../components";
 import { PieChart } from "react-minimal-pie-chart";
+import { APP_URL } from "../../../constants/api";
 
 const timerList = ["days", "hours", "minutes", "seconds"];
 
@@ -125,10 +126,12 @@ const Tokensale: React.FC = () => {
               </section>
             </div>
           </div>
-          <Button>
-            <span>Buy Token </span>
-            <RightArrow />
-          </Button>
+          <a href={APP_URL}>
+            <Button>
+              <span>Buy Token </span>
+              <RightArrow />
+            </Button>
+          </a>
         </div>
         <div className="token_sale_proceeds" data-aos="zoom-in">
           <h1>

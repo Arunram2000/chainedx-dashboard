@@ -7,7 +7,6 @@ import { Web3Provider } from "@ethersproject/providers";
 import "./index.scss";
 import App from "./App";
 import "aos/dist/aos.css";
-import Provider from "./store/Provider";
 
 const getLibrary = (provider) => {
   const library = new Web3Provider(provider);
@@ -19,9 +18,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
       <BrowserRouter>
-        <Provider>
-          <App />
-        </Provider>
+        <App />
       </BrowserRouter>
     </Web3ReactProvider>
   </React.StrictMode>,

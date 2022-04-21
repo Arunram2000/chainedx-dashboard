@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 
 import { Button } from "../../../components";
@@ -6,15 +6,12 @@ import { Button } from "../../../components";
 import { ReactComponent as FileIcon } from "../../../assets/icons/file.svg";
 import { ReactComponent as RingIcon } from "../../../assets/icons/ring.svg";
 import miner from "../../../assets/images/miner.png";
-import { useWeb3React } from "@web3-react/core";
-import { WalletContext } from "../../../store/context/WalletContext";
+import { APP_URL } from "../../../constants/api";
 
 const timerList = ["days", "hours", "minutes", "seconds"];
 
 const Hero: React.FC = () => {
   const [percentage, setPercentage] = useState(0);
-  const { account } = useWeb3React();
-  const { setOpenWallet } = useContext(WalletContext);
 
   useEffect(() => {
     const timeout = setTimeout(() => setPercentage(50), 4000);
@@ -23,10 +20,6 @@ const Hero: React.FC = () => {
       clearTimeout(timeout);
     };
   }, []);
-
-  const handleBuyToken = async () => {
-    if (!account) return setOpenWallet(true);
-  };
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -119,10 +112,12 @@ const Hero: React.FC = () => {
             <FileIcon />
             <span>Whitepaper</span>
           </Button>
-          <Button variant="secondary" onClick={() => handleBuyToken()}>
-            <RingIcon />
-            <span>Buy Token</span>
-          </Button>
+          <a href={APP_URL}>
+            <Button variant="secondary">
+              <RingIcon />
+              <span>Buy Token</span>
+            </Button>
+          </a>
         </div>
       </div>
     </div>
