@@ -16,7 +16,7 @@ type IChartStats = {
 
 const ChartStats: React.FC<IChartStats> = ({ title, percentage, color }) => {
   return (
-    <div className="chart_stats-card">
+    <div id="token" className="chart_stats-card">
       <section data-percentage={percentage}>
         <span
           style={{ backgroundColor: color, width: `${percentage}%` }}

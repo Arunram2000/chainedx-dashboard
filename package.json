@@ -5,6 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@ethersproject/providers": "5.0.17",
     "@reduxjs/toolkit": "^1.8.0",
     "@types/jest": "^27.4.1",

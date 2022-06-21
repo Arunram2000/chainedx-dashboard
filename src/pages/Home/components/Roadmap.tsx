@@ -7,7 +7,7 @@ import { roadmap } from "../../../data/roadmap";
 
 const Roadmap: React.FC = () => {
   return (
-    <section className="roadmap">
+    <section id="roadmap" className="roadmap">
       <div className="mx pad">
         <div className="roadmap_container">
           <div className="roadmap_container-header">

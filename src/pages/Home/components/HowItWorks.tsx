@@ -11,7 +11,7 @@ import { ReactComponent as Interface } from "../../../assets/icons/interface.svg
 
 const HowItWorks: React.FC = () => {
   return (
-    <section className="works" style={{ marginBottom: 0 }}>
+    <section id="how_it_work" className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
         <div className="works_container" data-aos="fade-up">
           <div className="content">

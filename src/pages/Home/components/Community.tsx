@@ -14,7 +14,7 @@ const Community: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   return (
-    <section className="works" style={{ marginBottom: 0 }}>
+    <section id="team" className="works" style={{ marginBottom: 0 }}>
       <div className="mx pad">
         <div className="works_container" data-aos="slide-up">
           <div className="content">

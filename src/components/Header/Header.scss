@@ -7,4 +7,22 @@ header.header {
   .logo img {
     width: 18rem;
   }
+
+  .navlinks {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.25rem;
+
+    li a {
+      font-size: 1.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      transition: color 250ms linear;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
 }

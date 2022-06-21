@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 import { Button } from "../../../components";
 import { ReactComponent as Location } from "../../../assets/icons/location.svg";
@@ -11,18 +12,36 @@ import { ReactComponent as Google } from "../../../assets/icons/google.svg";
 import { ReactComponent as Pinterest } from "../../../assets/icons/pinterest.svg";
 
 const initialState = {
-  name: "",
+  username: "",
   email: "",
   subject: "",
   message: "",
 };
+
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState(initialState);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData);
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY)
+      return alert("something went wrong");
+
+    const formValues = { ...formData, admin_mail: "arunram20001136@gmail.com" };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formValues, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        setFormData(initialState);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -30,7 +49,7 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="contactus">
+    <div id="contact" className="contactus">
       <div className="max pad">
         <div className="contactus_container">
           <div className="contact_info" data-aos="flip-up">
@@ -100,11 +119,11 @@ const ContactUs: React.FC = () => {
             <div className="contact_form_block">
               <form onSubmit={handleSubmit}>
                 <div className="form_input">
-                  <label htmlFor="name">Enter Name*</label>
+                  <label htmlFor="username">Enter Name*</label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="username"
+                    value={formData.username}
                     onChange={handleChange}
                     required
                   />
