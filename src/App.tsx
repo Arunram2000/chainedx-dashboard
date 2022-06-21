@@ -1,9 +1,8 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Footer, Header } from "./components";
 
-import { Home } from "./pages";
+import { Admin, Home } from "./pages";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -14,11 +13,10 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin/*" element={<Admin />} />
       </Routes>
-      <Footer />
     </div>
   );
 };
